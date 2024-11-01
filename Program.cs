@@ -6,6 +6,7 @@ Console.OutputEncoding = System.Text.Encoding.UTF8;
 short MenuPoint;
 bool FirstVisitPoint1 = true;
 int MaxPlayersLimit = 1;
+Console.WriteLine("Текст для коміту");
 List<Player> players = new List<Player>();
 
 while (true)
