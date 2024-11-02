@@ -6,7 +6,6 @@ Console.OutputEncoding = System.Text.Encoding.UTF8;
 short MenuPoint;
 bool FirstVisitPoint1 = true;
 int MaxPlayersLimit = 1;
-//Console.WriteLine("Текст для коміту");
 List<Player> players = new List<Player>();
 
 while (true)
@@ -196,7 +195,6 @@ while (true)
                         Console.Write("-->");
                         string s = Console.ReadLine();
                         s = s + ";1;0";
-                        Console.WriteLine(s);
                         ErrorTryParse = !Player.TryParse(s, out NewPlayer, out ErrorText);
                         if (ErrorTryParse) Console.WriteLine("Помилка: " + ErrorText);
                     } while (ErrorTryParse);

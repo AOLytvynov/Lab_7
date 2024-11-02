@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Lab_7.Player">
+    <Position X="4.25" Y="0.75" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>CIAgEAAAAIAIgABEAEBCAAQBAgAFAEAhAIAAIQAEAgE=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab7TestProject.PlayerTest">
+    <Position X="8.75" Y="0.75" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>ABEABAAAAEIAAAAgAAAFACKBAAAAQhAAICEAAgBMAIA=</HashCode>
+      <FileName>Lab7TestProject\PlayerTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Lab_7.PlayerClass">
+    <Position X="2.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAQAAAAIAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>PlayerClasses.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

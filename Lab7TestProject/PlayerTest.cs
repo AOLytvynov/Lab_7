@@ -132,8 +132,8 @@ namespace Lab7TestProject
             List<Player> players = new List<Player>();
             players.Add(new Player(Name));
             players.Add(new Player(Name));
-            players.Add(new Player(Name));
-            int expected_number = 3;
+            Player newPlayer = new Player("Player");
+            int expected_number = 2;
 
             //Act
             Player.RecountPlayers(players);
@@ -179,15 +179,17 @@ namespace Lab7TestProject
         [TestMethod]
         [DataRow("")]
         [DataRow("Happy")]
-        [DataRow("Привіт 101010 1")]
-        [DataRow("Pl 101010 1")]
-        [DataRow("adsfasdfasdfasdfasdfasdfadsf 101010 2")]
-        [DataRow("Player asdf 3")]
-        [DataRow("Player 10101 4")]
-        [DataRow("Player 101010 adf")]
-        [DataRow("Player 101010 -1")]
-        [DataRow("Player 101010 5")]
-
+        [DataRow("Привіт;101010;1;1;0")]
+        [DataRow("Pl;101010;1;1;0")]
+        [DataRow("adsfasdfasdfasdfasdfasdfadsf;101010;2;1;0")]
+        [DataRow("Player;asdf;3;1;0")]
+        [DataRow("Player;10101;4;1;0")]
+        [DataRow("Player;101010;adf;1;0")]
+        [DataRow("Player;101010;-1;1;0")]
+        [DataRow("Player;101010;5;asdf;0")]
+        [DataRow("Player;101010;1;-1;0")]
+        [DataRow("Player;101010;1;1;-1")]
+        [DataRow("Player;101010;1;1;asdf")]
         public void ParseTest_throw_Exceptions(string s)
         {
             //Arrange
@@ -199,7 +201,7 @@ namespace Lab7TestProject
         public void ParseTest_correct_data()
         {
             //Arrange
-            string s = "Player 101010 3";
+            string s = "Player;101010;3;1;0";
 
             //Act
             Player TestPlayer = Player.Parse(s);
@@ -211,14 +213,17 @@ namespace Lab7TestProject
         [TestMethod]
         [DataRow("")]
         [DataRow("Happy")]
-        [DataRow("Привіт 101010 1")]
-        [DataRow("Pl 101010 1")]
-        [DataRow("adsfasdfasdfasdfasdfasdfadsf 101010 2")]
-        [DataRow("Player asdf 3")]
-        [DataRow("Player 10101 4")]
-        [DataRow("Player 101010 adf")]
-        [DataRow("Player 101010 -1")]
-        [DataRow("Player 101010 5")]
+        [DataRow("Привіт;101010;1;1;0")]
+        [DataRow("Pl;101010;1;1;0")]
+        [DataRow("adsfasdfasdfasdfasdfasdfadsf;101010;2;1;0")]
+        [DataRow("Player;asdf;3;1;0")]
+        [DataRow("Player;10101;4;1;0")]
+        [DataRow("Player;101010;adf;1;0")]
+        [DataRow("Player;101010;-1;1;0")]
+        [DataRow("Player;101010;5;asdf;0")]
+        [DataRow("Player;101010;1;-1;0")]
+        [DataRow("Player;101010;1;1;-1")]
+        [DataRow("Player;101010;1;1;asdf")]
         public void TryParseTest_incorrect_data(string s)
         {
             //Arrange
