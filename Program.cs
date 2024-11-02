@@ -695,7 +695,7 @@ while (true)
                         string path2 = Console.ReadLine();
                         string error2;
                        List<Player> Loadedplayers2 = ReadFromFileJson(path2, out error2);
-                        players.InsertRange(players.Count, Loadedplayers2);
+                        if (Loadedplayers2 != null) players.InsertRange(players.Count, Loadedplayers2);
                         if (error2 != "")
                         {
                             Console.Write(error2);
