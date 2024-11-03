@@ -693,8 +693,9 @@ while (true)
                     case 2:
                         Console.Write("Введіть шлях до файлу-->");
                         string path2 = Console.ReadLine();
-                        string error2;
-                       List<Player> Loadedplayers2 = ReadFromFileJson(path2, out error2);
+                        string error2 = "";
+                        List<Player> Loadedplayers2 = null;
+                        Loadedplayers2 = ReadFromFileJson(path2, out error2);
                         if (Loadedplayers2 != null) players.InsertRange(players.Count, Loadedplayers2);
                         if (error2 != "")
                         {
